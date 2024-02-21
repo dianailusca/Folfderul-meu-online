@@ -1,0 +1,39 @@
+Descriere
+
+Scenario 1: Utilizatorul se poate loga
+ Given Utilizatorul se află pe pagina de logare
+ When Utilizatorul merge la secțiunea First name
+ And Utilizatorul introduce un text mai mare de cât 2 caractere
+ Then Utilizatorul plasează numele cu succes 
+ When Utilizatorul merge la secțiunea Last name
+ And Utilizatorul introduce un text mai mare de cât 2 caractere
+ Then Utilizatorul  plasează prenumele cu succes
+ When Utilizatorul merge la secțiunea Email address
+ And Utilizatorul introduce adresa email validă
+ Then Utilizatorul  plasează adresa de email cu succes
+ When Utilizatorul merge la secțiunea Date of birth
+ And Utilizatorul alege luna în care s-a născut
+ And Utilizatorul alege ziua în care s-a născut
+ And Utilizatorul alege anul în care s-a născut
+ Then Utilizatorul  plasează datele de naștere cu succes
+ When Utilizatorul merge la secțiunea Languages (spoken)
+ And Face de 2 ori click pe câmpul limbelor vorbite
+ Then Utilizatorul oate alege limba română
+ When Utilizatorul merge la secțiunea Languages (spoken)
+ And Face de 2 ori click pe câmpul limbelor vorbite
+ Then Utilizatorul oate alege limba rusă
+ When Utilizatorul merge la secțiunea Languages (spoken)
+ And Face de 2 ori click pe câmpul limbelor vorbite
+ Then Utilizatorul oate alege limba italiană
+Scenario 2: Utilizatorul nu se poate loga
+ Given Utilizatorul se află pe pagina de logare
+ When Utilizatorul merge la secțiunea First name
+ And  Utilizatorul introduce un caracter
+ Then Utilizatorul nu poate  plasa numele
+ When Utilizatorul merge la secțiunea Last name
+ And Utilizatorul introduce un caracter
+ Then Utilizatorul nu poate  plasa prenumele
+ When Utilizatorul merge la secțiunea Email address
+ And Utilizatorul introduce adresa email invalidă
+ Then Utilizatorul nu poate  plasa adresa de email
+ 
